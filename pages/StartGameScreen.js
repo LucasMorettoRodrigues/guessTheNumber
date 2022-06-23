@@ -27,7 +27,7 @@ const StartGameScreen = ({ onConfirm }) => {
 
   return (
     <View style={styles.container}>
-      <Title>Guess My Number</Title>
+      <Title style={styles.titleStyle}>Guess My Number</Title>
       <View style={styles.inputContainer}>
         <Text style={styles.inputText}>Enter a number between 0 and 99</Text>
         <TextInput
@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 60,
     flex: 1,
+  },
+  titleStyle: {
+    marginBottom: 10,
   },
   titleContainer: {
     alignItems: "center",

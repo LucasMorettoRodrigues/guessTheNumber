@@ -1,10 +1,10 @@
 import { View, StyleSheet, Text } from "react-native";
 import { Colors } from "../constants/colors";
 
-const Title = ({ children }) => {
+const Title = ({ children, style }) => {
   return (
     <View>
-      <Text style={styles.title}>{children}</Text>
+      <Text style={[styles.title, style]}>{children}</Text>
     </View>
   );
 };

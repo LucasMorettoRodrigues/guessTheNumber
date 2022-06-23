@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
 import { Alert, StyleSheet, Text, View } from "react-native";
 import Title from "../components/Title";
 import PrimaryButton from "../components/PrimaryButton";
@@ -62,16 +63,15 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     <View style={styles.container}>
       <Title>Opponent's Guess</Title>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>YourNumber: {userNumber}</Text>
         <Text style={styles.text}>Guess: {guessedNumber}</Text>
-        <Text style={styles.text}>Game Screen</Text>
+        <Text style={styles.text}>Higher or Lower?</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <PrimaryButton onPress={() => handleNextGuess("lower")}>
-          -
+          <Ionicons name={"md-remove"} size={24} color={"white"} />
         </PrimaryButton>
         <PrimaryButton onPress={() => handleNextGuess("higher")}>
-          +
+          <Ionicons name={"md-add"} size={24} color={"white"} />
         </PrimaryButton>
       </View>
     </View>
@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
-    fontSize: 20,
+    fontSize: 30,
+    margin: 10,
   },
   titleContainer: {
     alignItems: "center",
